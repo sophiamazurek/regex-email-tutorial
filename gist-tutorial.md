@@ -1,10 +1,9 @@
-# Title (replace with your title)
+# What We Will Do
 
-Introductory paragraph (replace this with your text)
+In this tutorial we are looking at how to build and email using regex expressions. Looking at the expression step by step will help the developed understand how to properly build and what it is telling you to do. 
 
-## Summary
+The expression that we will be looking at is `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` and together we will disect each component of the expression to fully understand how it will build out a proper email. 
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
 ## Table of Contents
 
@@ -15,32 +14,33 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+
 
 ## Regex Components
 Provided below is the breakdown of the expression for an email.
 
-Matching an Email – /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+Matching an Email – `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
+First Part: `([a-z0-9_\.-]+)@`
 
-qualified emailmatch: test@
-
-([a-z0-9_\.-]+)@
 a-z or 0-9 or _
 and it must be followed by a  "@"
 
-qualified emailmatch: gmail.com
+qualified emailmatch: test@
 
-([\da-z\.-])
-\d says it needs to have digit spacing from 0-9
+Second Part:`([\da-z\.-]+)\.` qualified emailmatch: gmail.com
+
+`\d` says it needs to have digit spacing from 0-9
 the characters allowed need to be from a-z
-\. it must be followed by a . 
+`\.` it must be followed by a `.`
 valid example: test@gmail.
 
-a-z{2,6}    matches a string that has user's letters followed by 2 up to 6 of the letters
+Third Part: `([a-z\.]{2,6})$/`
+
+a-z{2,6}  matches a string that has user's letters followed by 2 up to 6 of the letters
+
+qualified emailmatch: test@gmail.com
+
 
 ### Anchors
 Anchors are the first part of writing an expression. They will start with `^` and end with `$`. 
@@ -103,14 +103,6 @@ The last add on that we can have is adding `?<foo>`. To keep going with our exam
 
 ### Bracket Expressions
 The bracket expressions will be using `[]` and just like the grouping and capturing section we are able to have different forms of this. 
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
