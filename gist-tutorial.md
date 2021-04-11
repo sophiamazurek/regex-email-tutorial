@@ -106,4 +106,4 @@ The bracket expressions will be using `[]` and just like the grouping and captur
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+If you have any questions or comments please contact me at smazurek44@gmail.com or check out my github at https://github.com/sophiamazurek 
